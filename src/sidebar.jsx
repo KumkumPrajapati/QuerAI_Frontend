@@ -2,6 +2,7 @@ import "./sidebar.css";
 import { myContext } from "./myContext.jsx";
 import { useContext, useEffect, useState} from "react";
 import {v1 as uuidv1} from "uuid";
+import logo from './assets/logo.png';
 
 function Sidebar(){
 
@@ -87,7 +88,7 @@ function Sidebar(){
         {isOpen && <div className="sidebar-backdrop" onClick={toggleSidebar} />}
         <section className={`sidebar ${isOpen ? "open" : ""}`}>
             <button onClick={createNewChat}>
-                <img src="src/assets/logo.png" alt="gpt logo" className="logo" />
+                <img src={logo} alt="gpt logo" className="logo" />
                 <span><i className="fa-solid fa-pen-to-square"></i></span>
             </button>
         {/* // <section className="sidebar">
